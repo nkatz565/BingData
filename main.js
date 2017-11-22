@@ -4,7 +4,7 @@ function isBetween(dataPoint,time){
 	if(time>=dataPoint.start_time && time<=dataPoint.end_time) return true;
 	else return false;
 }
-var myLatlng;
+var gmap;
 var map;
 var heatmap;
 var mapData;
@@ -201,32 +201,21 @@ function prepareBuildingNumChart(b){
 
 document.addEventListener("DOMContentLoaded", function(event) { 
 
- // map center
-        myLatlng = new google.maps.LatLng(42.089717, -75.967000);
-        // map options,
+        gmap = new google.maps.LatLng(42.089717, -75.967000);
         var myOptions = {
           zoom: 17,
-          center: myLatlng
+          center: gmap
         };
-        // standard map
         map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
         
         heatmap = new HeatmapOverlay(map,
           {
-            // radius should be small ONLY if scaleRadius is true (or small radius is intended)
             "radius": .0005,
             "maxOpacity": 1,
-            // scales the radius based on map zoom
             "scaleRadius": true,
-            // if set to false the heatmap uses the global maximum for colorization
-            // if activated: uses the data maximum within the current map boundaries
-            //   (there will always be a red spot with useLocalExtremas true)
             "useLocalExtrema": false,
-            // which field name in your data represents the latitude - default "lat"
             latField: 'lat',
-            // which field name in your data represents the longitude - default "lng"
             lngField: 'lng',
-            // which field name in your data represents the data value - default "value"
             valueField: 'count'
           }
         );
@@ -380,7 +369,6 @@ var buildings={
 	BI:{lat:42.094022,lng:-75.959129},
 	C4:{lat:42.087727,lng:-75.962957},
 	CV:{lat:42.089080,lng:-75.976450},
-	DC:{lat:0,lng:0},
 	GE:{lat:42.091615,lng:-75.964350},
 	EB:{lat:42.087397,lng:-75.968003},
 	FA:{lat:42.089488,lng:-75.968126},
@@ -405,11 +393,9 @@ var buildings={
 	WH:{lat:42.088564,lng:-75.963845},
 	ES:{lat:42.094406,lng:-75.958378},
 	SN:{lat:42.094310,lng:-75.961382},
+	DC:{lat:0,lng:0}, //not fully sure these even exist
 	OF:{lat:0,lng:0},
 	CD:{lat:0,lng:0},
 	CE:{lat:0,lng:0},
 	TB:{lat:0,lng:0},
 }
-String.prototype.splice = function(idx, rem, str) {
-    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
-};

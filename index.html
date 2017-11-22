@@ -1,8 +1,4 @@
 <html>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
 <script type="text/javascript" src="heatmap.js" ></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbrHnOiYTvdL9XWFWfBY88z66SiILdBNI"></script>
 <script type="text/javascript" src="gmaps-heat.js" ></script>
@@ -20,7 +16,7 @@
 <div class="header-controls">
 	<input type="range" min="800" max="1670" value="800" id="time-slider" oninput="updateTime()" >
 	<p id="current-time">8:00</p>
-	<p>Range: 0-1000+</p>
+	<p>Heatmap Range: 0-1000+</p>
 	<select id="day-value" onchange="updateDay()">
 	  <option value="0">Monday</option>
 	  <option value="1" >Tuesday</option>
