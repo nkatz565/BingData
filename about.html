@@ -1,0 +1,37 @@
+<html>
+ <body>
+So this is a site I built to visualize class data based on time of day (for the Fall 2017 semester)
+
+Why did I build this?
+Parking at my school sucks. The problems is that it is difficult to get a spot that is good, or sometimes even one that just isn't terrible. The vox populi says the university needs to build more parking to solve this. I don't think this is the issue (although it can't hurt), I think there is just some poor campus resource utilization where some parts of campus are overutilized at certain times while others are not utilized enough. 
+
+The questions I had
+I had two theories on how to improve parking without building more parking spots. The first is that classes were too condensed in terms of time. This can be visualized by chart A. The second, is that classes were too condensed in terms of location. This can be visualized by the map and chart C. 
+
+Theory 1: Time
+There are certain obvious cases where far too many students, or far to few students, are in classes. One case is on Tuesday at 10:05 AM. The amount of students peaks at 1.3 standard deviations above the mean, which indicates to me that this time slot is over utilized. Another case is 12PM on Monday, Wednesday, and Friday. Here the amount of students is 1.35 standard deviations below the mean, which indicates to me that this time slot is under utilized. Aside from this, the time slots of 4PM-6PM are generally close to the mean. They could possibly be utilized slightly more. The only other times that are severely underutilized are either super early or late in the day, and I doubt any college student would be okay with more classes at those times.
+
+Theory 2: Space
+This one is a little more difficult to quantify. Looking at the heat map, we can see that most classes occur on the east side of campus. This is because there are very few large buildings capable of holding classes on the west side. If the large buildings were more distributed across campus, with some lots being placed on the west side as well, there may be a small improvement in parking.
+
+Other random plots and observations
+
+While I had all this data, I looked at various other trends I thought may be interesting. One such case was the average size of each class. On most days, this had a noticeable decrease as the day went on,
+probably due to less lectures later in the day. However, it also had a large jump very late in the day on most days, not sure what was causing that. Finally, Friday didn't follow any of those trends.
+Following this trend, the only time the lecture hall isn't the most occupied is early in the day and late in the day.
+The max amount of students in class was 6372 on Tuesday at 10:15. The day with the lowest max amount of students was Friday with 5027 students. Not very surprising, people avoid Friday classes.
+I have no clue why 12PM on MWF is so lightly used, when this doesn't occur on Tuesday Thursday. Seems strange that a lunch break is only given 3 times a week?
+
+Some notes on parking
+
+I don't visualize this, but using some GIS data that a friend provided me, I calculated that there are 5733 spots on campus for commuters to park in for free. Of these, around 1000 can be expected to be occupied by residents with parking permits who aren't moving their cars to go to class. This leaves 4733 spots available for commuters. I had data on parking throughout the day, but the data only covers 4 time slots a day, which I wasn't sure what to do with. If it was more comprehensive I would have loved to plot it side by side with classes. Also, I honestly think their methodology was flawed. They took data at 8AM, 12PM, 3PM, and 7PM. I don't think any of those times are necessarily the most interesting times to see the parking. Its no surprise that there is plenty of parking at 8AM and 7PM, and 12PM and 3PM aren't the peak times on any day so the data here won't show the worst of the issue.
+
+Conclusions
+Based on this data, I think it was fair to say that campus utilization wasn’t perfect, but it also wasn’t as bad as I expected. 
+Class populations did generally fall close to the mean, although there are a few cases for improvement. The most major improvement that could be made here would be extending the day so that more classes occurred at 6 and later, but this is a non-ideal solution for students who don’t want to stay late, and for the school that would have to keep extra staff around later. 
+As for class locations, it does seem problematic to me, but also not a viable solution. It’s not like the school can just pick up one of the major buildings and move it to the west side of campus. If the campus had been planned to be a little more future proof this could have helped, but the buildings on the west side have been there since the 60s or earlier (and used to be dorms) so it’s hard to blame them.
+
+ 
+ 
+ </body>
+</html>
