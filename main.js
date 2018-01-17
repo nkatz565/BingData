@@ -123,7 +123,7 @@ function updateTime(){
 	if(hours.toString().length == 1) hours = '0' + hours;
 	if(minutes.toString().length == 1) minutes = '0' + minutes;
 	
-	if(hours>=12) document.getElementById('current-time').innerHTML=(hours-12)+':'+minutes +'PM';
+	if(hours>12) document.getElementById('current-time').innerHTML=(hours-12)+':'+minutes +'PM';
 	else document.getElementById('current-time').innerHTML=hours+':'+minutes+'AM';
 
 	time = parseInt(hours.toString()+minutes.toString());
